@@ -1,0 +1,14 @@
+<header>
+    <nav class="wrapper">
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="https://www.instagram.com/_mr__maximus_/">CONTACT ME</a></li>
+            <li><a href="https://mister-maximus.github.io/personal-Website/">ABOUT ME</a></li>
+            <% if (isAuthenticated) {%>
+                <a href="/">Logout</a>
+                <% }else{ %>
+           <a href="/login">Login</a>
+                <% } %>
+        </ul>
+    </nav>
+</header>

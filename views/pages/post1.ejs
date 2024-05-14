@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning Javascript</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <div class="body-header">
+    
+    <%- include("../partials/header.ejs") %>
+    <h1><%= post.title %></h1>
+   
+        
+        <p>Welcome to the exciting world of JavaScript! Whether you're a complete novice to programming or you're already familiar with other languages, learning JavaScript opens up a plethora of opportunities in web development, application building, and beyond. In this beginner's guide, we'll take you through the foundational aspects of JavaScript, from understanding its role in web development to writing your first lines of code.<p>
+            <h3>Understanding JavaScript</h3>
+            <p>JavaScript is a versatile programming language primarily used for adding interactivity to web pages. It's one of the core technologies of the World Wide Web, alongside HTML and CSS. Unlike HTML, which provides the structure of web pages, and CSS, which dictates their style, JavaScript enables dynamic behavior, allowing users to interact with web content.</p>
+            
+            
+            <h3>Getting Started</h3>
+            <p>Before diving into JavaScript, it's beneficial to have a basic understanding of HTML and CSS. With that groundwork laid, you can start exploring JavaScript's capabilities.
+            </p>
+            <h3>Setting Up Your Environment</h3>
+            <p>To begin coding in JavaScript, all you need is a text editor and a web browser. Popular text editors like Visual Studio Code, Sublime Text, or Atom provide excellent support for JavaScript development. You can write your code in these editors and then open the associated HTML file in a web browser to see the results.</p>
+            
+            <h3>Learning Resources</h3>
+            <p>There are numerous resources available to aid your learning journey. Online tutorials, books, interactive coding platforms, and community forums are great places to start. Websites like Codecademy, freeCodeCamp, and Mozilla Developer Network (MDN) offer comprehensive tutorials and documentation for JavaScript learners.</p>
+            
+            <h3>Core Concepts</h3>
+            <h3>Variables and Data Types</h3>
+            <p>In JavaScript, variables are containers for storing data values. They can hold various data types, including numbers, strings, booleans, arrays, objects, and more. Understanding how to declare and manipulate variables is fundamental to writing JavaScript code.</p>
+            
+            <h3>Functions</h3>
+            <p>Functions are reusable blocks of code designed to perform a specific task. They allow you to encapsulate logic and execute it multiple times with different inputs. Learning how to define and call functions is essential for writing modular and efficient JavaScript code.</p>
+            
+            <h3>Control Flow</h3>
+            <p>Control flow structures such as if statements, loops, and switch statements enable you to control the execution of your code based on conditions and iterate over data. Mastering control flow is crucial for building dynamic and responsive applications.</p>
+            
+            <h3>Practical Projects</h3>
+            <p>As you progress in your JavaScript journey, it's essential to apply your knowledge to real-world projects. Start with simple exercises like creating a calculator, building a to-do list app, or designing a basic game. These projects not only reinforce your understanding but also showcase your skills to potential employers or collaborators.</p>
+            <h3>
+                Conclusion</h3>
+                <p>
+            Learning JavaScript is an empowering journey that opens doors to endless possibilities in web development and beyond. By understanding its core concepts, practicing regularly, and building projects, you'll gradually gain confidence and proficiency in the language. Remember, patience and perseverance are key, and don't hesitate to seek help from online communities or mentors along the way. Happy coding!
+                </p>
+    </div>
+    <h2>Add a comment</h2>
+    <form action="/comment/<%= post.id %>" method="post">
+        <input type="text" name="comment" placeholder="Type your comment here">
+        <button type="submit">Submit comment</button>
+    </form>
+    <% if (post.Comments && post.Comments.length>0) {%>
+        <h2>comments:</h2>
+        <ul><% post.Comments.forEach((comment)=>{ %>
+            <li><%=comment%></li>
+            <%});%>
+        </ul>
+    <% } %>
+        
+
+    
+    
+    
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>
