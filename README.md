@@ -73,6 +73,7 @@ License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 Contact
-For any questions or feedback, please open an issue or contact us at support@blogwebsite.com.
+For any questions or feedback, please open an issue or contact us at graj63840@gmail.com
+
 
 Thank you for using our Blog Website! Happy blogging!
